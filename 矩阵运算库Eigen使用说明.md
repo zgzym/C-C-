@@ -8,6 +8,10 @@
 
 头文件对应的功能：
 
+这里要注意的是，查看/usr/include/Eigen的目录，因为我的Linux系统里包含头文件的Eigen目录其实是/usr/include/Eigen，
+
+因此头文件的包含代码为 #include <Eigen/Eigen/Dense>
+
 | header | function|
 |  ----  | ----  |		
 |#include <Eigen/Core> | Matrix and Array classes, basic linear algebra (including triangular and selfadjoint products), array manipulation|
