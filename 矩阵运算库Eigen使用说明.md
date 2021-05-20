@@ -31,6 +31,8 @@
 ```c++
 	g++ -I eigen-3.4-rcl/ main.cc
 ```
+若头文件为 #include <Eigen/Eigen/Dense> 则不需要加 -I eigen-3.4-rcl/
+
 矩阵定义：
 ```c++
     #include <Eigen/Dense>
