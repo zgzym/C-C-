@@ -1,5 +1,32 @@
 ## 原文地址： https://www.cnblogs.com/python27/p/EigenQuickRef.html
 
+### Eigen库的配置：
+
+在网站上下载压缩包：http://eigen.tuxfamily.org/index.php?title=Main_Page
+
+解压压缩包文件，将解压后的文件夹放入代码所在目录。
+
+头文件对应的功能：
+
+| header | function|
+|  ----  | ----  |		
+|#include <Eigen/Core> | Matrix and Array classes, basic linear algebra (including triangular and selfadjoint products), array manipulation|
+|#include <Eigen/Geometry> | Transform, Translation, Scaling, Rotation2D and 3D rotations (Quaternion, AngleAxis)|
+|#include <Eigen/LU> | Inverse, determinant, LU decompositions with solver (FullPivLU, PartialPivLU)|
+|#include <Eigen/Cholesky> | LLT and LDLT Cholesky factorization with solver|
+|#include <Eigen/Householder> | Householder transformations; this module is used by several linear algebra modules|
+|#include <Eigen/SVD> | SVD decomposition with least-squares solver (JacobiSVD)|
+|#include <Eigen/QR> | QR decomposition with solver (HouseholderQR, ColPivHouseholderQR, FullPivHouseholderQR)|
+|#include <Eigen/Eigenvalues> | Eigenvalue, eigenvector decompositions (EigenSolver, SelfAdjointEigenSolver,ComplexEigenSolver)|
+|#include <Eigen/Sparse> | Sparse matrix storage and related basic linear algebra (SparseMatrix, DynamicSparseMatrix,SparseVector)|	
+|#include <Eigen/Dense> | Includes Core, Geometry, LU, Cholesky, SVD, QR, and Eigenvalues header files| 	
+|#include <Eigen/Eigen> | Includes Dense and Sparse header files (the whole Eigen library)|
+
+
+编译命令，eigen-3.4-rcl为Eigen文件夹目录：
+```c++
+	g++ -I eigen-3.4-rcl/ main.cc
+```
 矩阵定义：
 ```c++
     #include <Eigen/Dense>
@@ -232,3 +259,4 @@
     eig.eigenvalues();                // diag(val)
     eig.eigenvectors();               // vec
     // For self-adjoint matrices use SelfAdjointEigenSolver<>
+```
