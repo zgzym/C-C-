@@ -192,7 +192,7 @@
 ```
 	矩阵文件的读取示例代码如下：
 ```c++
-		FileStorage fs("example.xml", FileStorage::READ); //表示以“READ"模式打开文件example.xml，若不存在则报错
+    FileStorage fs("example.xml", FileStorage::READ); //表示以“READ"模式打开文件example.xml，若不存在则报错
 		
     Mat mat_example; // 定义矩阵mat_example用于保存example.xml中的矩阵
 		
