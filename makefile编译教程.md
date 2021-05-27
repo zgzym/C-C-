@@ -1,7 +1,7 @@
 ### 1. 简单粗暴版
 	
 	假设有2个.cc文件需要编译，分别为main.cc和function.cc，则新建makefile文件：
-	\# vim makefile
+	# vim makefile
 	
 	修改makefile内容为：
   
@@ -10,10 +10,10 @@
     g++ -g -o main main.o function.o -std=c++11 `pkg-config --libs --cflags opencv4`
 
   function.o:function.cc
-    g++ -g -c function.cc -std=c++11 \`pkg-config --libs --cflags opencv4\`
+    g++ -g -c function.cc -std=c++11 `pkg-config --libs --cflags opencv4`
 
   main.o:main.cc
-    g++ -g -c main.cc -std=c++11 \`pkg-config --libs --cflags opencv4\`
+    g++ -g -c main.cc -std=c++11 `pkg-config --libs --cflags opencv4`
 
   .PHONY:clean
   clean:
@@ -24,11 +24,11 @@
 	
 	需要注意编译顺序，执行make时按照从下往下的顺序执行，即：
 	
-	# g++ -g -c main.cc -std=c++11 \`pkg-config --libs --cflags opencv4\`
+	# g++ -g -c main.cc -std=c++11 `pkg-config --libs --cflags opencv4`
 	
-	# g++ -g -c function.cc -std=c++11 \`pkg-config --libs --cflags opencv4\`
+	# g++ -g -c function.cc -std=c++11 `pkg-config --libs --cflags opencv4`
 	
-	# g++ -g -o main main.o function.o -std=c++11 \`pkg-config --libs --cflags opencv4\`
+	# g++ -g -o main main.o function.o -std=c++11 `pkg-config --libs --cflags opencv4`
 	
 	输入下列命令执行makefile:
 	
