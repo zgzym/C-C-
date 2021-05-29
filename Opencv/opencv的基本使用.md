@@ -208,4 +208,84 @@
 	在读取数据时，[ ]中的内容为指定的标签，并将数据读入>>的变量中。
 
 	来源：https://blog.csdn.net/mmjwung/article/details/6913540		
-			
+
+## 5. 矩阵的基本运算
+	
+	5.1 获取矩阵维度
+```c++
+	Mat matrix;
+	matrix.rows; // 矩阵的行数
+	matrix.cols; //矩阵的列数
+```	
+	
+	5.2 矩阵与数值相乘，最好是float或double型数值
+```c++
+	Mat matrix, result;
+	float num;
+	matrix.convertTo(result, CV_32FC1, num); //result = matrix * num
+```
+	5.3 三角函数运算
+```c++
+	Mat matrix, result;
+	// cos()
+	cos(matrix, result); // result = cos(matrix);
+
+	// sin()
+	sin(matrix, result); // result = sin(matrix);
+
+	// 其余三角函数形式类似
+```
+
+	5.4 幂指数运算
+```c++
+	Mat matrix, result;
+	float n;
+	pow(matrix, n, result); // result 为 matrix每个元素的n次方
+```
+
+	5.5 指数运算(e^x)
+```c++
+	Mat matrix, result;
+	exp(matrix, result); // result = exp(matrix)
+```
+	5.6 平方根
+```c++
+	Mat matrix, result;
+	sqrt(matrix, result);
+```
+	5.7 加减法
+```c++
+	Mat m1, m2, result1, result2;
+	result1 = m1 - m2;
+	result2 = m1 + m2;
+```
+	5.8 矩阵的点乘（对应位置元素相乘）
+```c++
+	Mat m1, m2, result;
+	result = m1.mul(m2);
+```
+	5.9 矩阵的点除（对应位置元素相除）
+```c++
+	Mat m1, m2, result;
+	result = m1 / m2;
+```
+	5.10 矩阵的乘法
+```c++
+	Mat m1, m2, result;
+	result = m1 * m2;
+```
+	5.11 矩阵与数值比较
+	
+	矩阵与数值num比较，若相应位置的元素不小于n,则矩阵相应位置值为1，否则为0：
+```c++
+	cv::Mat NotSmaller(cv::Mat m, float num){
+		cv::Mat result = cv::Mat::zeros(cv::Size(m.rows,m.cols),CV_32FC1);
+		int i, j;
+		for(i=0;i!=m.rows;i++){
+			for(j=0;j!=m.cols;j++){
+				result.at<float>(i,j) = (m.at<float>(i,j) > num) ? 1 :0;
+			}
+		}
+		return result;
+	}
+```
