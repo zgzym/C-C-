@@ -225,16 +225,8 @@
 	matrix.convertTo(result, CV_32FC1, num); //result = matrix * num
 ```
 	5.3 三角函数运算
-```c++
-	Mat matrix, result;
-	// cos()
-	cos(matrix, result); // result = cos(matrix);
-
-	// sin()
-	sin(matrix, result); // result = sin(matrix);
-
-	// 其余三角函数形式类似
-```
+	
+	opencv中没有定义矩阵的三角函数
 
 	5.4 幂指数运算
 ```c++
