@@ -281,3 +281,8 @@
 		return result;
 	}
 ```
+	5.12 计算2个矩阵对应元素之差的绝对值
+```c++
+	cv::Mat m1, m2, result;
+	cv::absdiff(m1,m2,result); // result = abs(m1-m2)
+```
