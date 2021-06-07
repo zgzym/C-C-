@@ -286,3 +286,9 @@
 	cv::Mat m1, m2, result;
 	cv::absdiff(m1,m2,result); // result = abs(m1-m2)
 ```
+	5.13 计算矩阵的所有元素之和
+```c++
+	Mat m; //m为单通道矩阵
+	float result;
+	result = sum(m)[0]; // sum()返回的是多个通道的元素各自求和的值
+```
