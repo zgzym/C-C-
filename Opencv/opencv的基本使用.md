@@ -297,3 +297,23 @@
 	magnitude(x, y, dist);
 ```
 	x,y为2个矩阵，dist = sqrt(x^2 + y^2)
+	
+	5.15 矩阵归一化
+```c++
+	void normalize(InputArray src,OutputArray dst,double alpha=1,double beta=0,int norm_type=NORM_L2,int dtype=-1,InputArray mask=noArray())
+```
+		第一个参数，InputArray类型的src。输入图像，即源图像，填Mat类的对象即可。
+
+		第二个参数，OutputArray类型的dst。函数调用后的运算结果存在这里，和源图片有一样的尺寸和类型。
+		
+		第三个参数，double类型的alpha。归一化后的最大值，有默认值1。
+		
+		第四个参数，double类型的beta。归一化后的最大值，有默认值0；
+		
+		第五个参数，int类型的norm_type。归一化类型，有NORM_INF、NORM_LI、NORM_L2和NORM_MINMAX等参数可选，有默认值NORM_L2。
+		
+		第六个参数，int类型的dtype,有默认值-1。当此参数取负值时，输出矩阵和src有同样的类型，否则，它和src有同样的通道数，且此时图像深度为
+		
+		CV_MAT_DEPTH(dtype)。
+		
+		第七个参数，InputArray类型的mask，可选的操作掩膜，有默认值noArray()。
