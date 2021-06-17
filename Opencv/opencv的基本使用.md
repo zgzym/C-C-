@@ -300,7 +300,7 @@
 	
 	5.15 矩阵归一化
 ```c++
-	void normalize(InputArray src,OutputArray dst,double alpha=1,double beta=0,int norm_type=NORM_L2,int dtype=-1,InputArray mask=noArray())
+	void normalize(InputArray src,OutputArray dst,double alpha=1,double beta=0,int norm_type=NORM_L2,int dtype=-1,InputArray mask=noArray());
 ```
 		第一个参数，InputArray类型的src。输入图像，即源图像，填Mat类的对象即可。
 
@@ -317,3 +317,10 @@
 		CV_MAT_DEPTH(dtype)。
 		
 		第七个参数，InputArray类型的mask，可选的操作掩膜，有默认值noArray()。
+	
+	5.16 利用Rect类选取矩阵的某一部分
+```c++
+	cv::Mat splice(m, cv::Rect(x1, y1, x2, y2));
+```
+		(x1,y1)为左上角元素的索引，（x2,y2）为右下角元素的索引
+
