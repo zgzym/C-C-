@@ -292,3 +292,8 @@
 	float result;
 	result = sum(m)[0]; // sum()返回的是多个通道的元素各自求和的值
 ```
+	5.14 计算幅值
+```c++
+	magnitude(x, y, dist);
+```
+	x,y为2个矩阵，dist = sqrt(x^2 + y^2)
