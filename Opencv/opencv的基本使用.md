@@ -170,6 +170,8 @@
 			M.at<double>(i,j) += 1.f;	//set (i,j)-th element
 		
 			int a = M.at<int>(i,j);		//get (i,j)-th element
+			
+			M.at<cv::Vec<double,3>>(i,j)[m]; // 3为通道数，m为通道编号
 ```
 		3.5.2 矩阵元素指针（ptr）
 ```c++
