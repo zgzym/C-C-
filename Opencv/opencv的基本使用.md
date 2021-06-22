@@ -325,4 +325,11 @@
 	cv::Mat splice(m, cv::Rect(x1, y1, x2, y2));
 ```
 		(x1,y1)为左上角元素的索引，（x2,y2）为右下角元素的索引
+		
+	5.17 将矩阵集合合并到一个多通道矩阵
+	merge函数有2种形式，
+	第一种：
+ 		数组类型：void merge(const Mat* mv, size_t count, OutputArray dst);
+ 	第二种：
+	 	向量容器类型：void merge(const vector& mv, OutputArray dst );	
 
