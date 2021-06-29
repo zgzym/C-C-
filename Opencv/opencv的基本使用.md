@@ -332,4 +332,10 @@
  		数组类型：void merge(const Mat* mv, size_t count, OutputArray dst);
  	第二种：
 	 	向量容器类型：void merge(const vector& mv, OutputArray dst );	
+	
+	5.18 拼接矩阵
+	
+	vconcat(B,C,A); // 将B和C按行拼接成A
+	
+	hconcat(B,C,A); // 将B和C按列拼接成A
 
