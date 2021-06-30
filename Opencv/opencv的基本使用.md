@@ -345,4 +345,10 @@
 	vconcat(B,C,A); // 将B和C按行拼接成A
 	
 	hconcat(B,C,A); // 将B和C按列拼接成A
+	
+	5.19 reshape函数
+	
+	Mat dst = m.reshape(i,j);
+	
+	其中，i为通道数，j为重构的矩阵的行数。
 
