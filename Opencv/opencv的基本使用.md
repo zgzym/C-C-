@@ -182,6 +182,13 @@
 					cout<<pData[j]<<endl;
 			}	
 ```
+		3.5.3 取矩阵的某一行或某一列
+```c++
+			Mat m;
+			int i = 0;
+			m.row(i);
+			m.col(i);
+```
 ## 4. 矩阵的保存与读取
 
 	c++中opencv的Mat类矩阵的保存采用FileStorage类，示例代码如下：	
