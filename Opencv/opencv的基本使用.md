@@ -329,7 +329,7 @@
 	
 	5.16 利用Rect类选取矩阵的某一部分
 ```c++
-	cv::Mat splice(m, cv::Rect(x1, y1, width, height));
+	m(cv::Rect(x1, y1, width, height));
 ```
 		(x1,y1)为左上角元素的索引，width为宽度，height为高度
 		
