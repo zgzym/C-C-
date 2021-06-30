@@ -12,7 +12,7 @@ InputArray src: 输入图像
 
 OutputArray dst: 输出图像，和输入图像具有相同的尺寸和通道数量
 
-int ddepth: 目标图像深度，如果没写将生成与原图像深度相同的图像。原图像和目标图像支持的图像深度如下：
+int ddepth: 目标图像深度，代表数据类型，如果没写将生成与原图像深度相同的图像。原图像和目标图像支持的图像深度如下：
 ```c++
     src.depth() = CV_8U, ddepth = -1/CV_16S/CV_32F/CV_64F
     src.depth() = CV_16U/CV_16S, ddepth = -1/CV_32F/CV_64F
