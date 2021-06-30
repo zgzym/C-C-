@@ -331,7 +331,7 @@
 ```c++
 	m(cv::Rect(x1, y1, width, height));
 ```
-		(x1,y1)为左上角元素的索引，width为宽度，height为高度
+### (x1,y1)为左上角元素的索引，x1表示第x1列，y1表示第y1行，width为宽度，height为高度
 		
 	5.17 将矩阵集合合并到一个多通道矩阵
 	merge函数有2种形式，
