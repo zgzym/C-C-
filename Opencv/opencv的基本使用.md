@@ -115,7 +115,7 @@
 			
 			//int type：参见"Mat类型定义"
 			
-			//Size size：矩阵尺寸，注意宽和高的顺序：Size(cols, rows)
+			//Size size：矩阵尺寸，注意宽和高的顺序：Size(cols, rows),**先列后行**
 			
 			//const Scalar& s：用于初始化矩阵元素的数值
 			
