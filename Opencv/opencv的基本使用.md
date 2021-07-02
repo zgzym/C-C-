@@ -351,6 +351,18 @@
 	Mat dst = m.reshape(i,j);
 	
 	其中，i为通道数，j为重构的矩阵的行数。
+	
+	注意：opencv中是按列重构矩阵，即一列一列的将矩阵重新排列，而matlab中是按行重构！
+	
+	如果报错“m is not continuous"，则说明m在内存中的存储地址不连续，比如取矩阵的某一列m.col(0)会导致这种情况发生；
+	
+	保险起见，在reshape函数前加入判断语句：
+```c++
+	if( !m.isContinuous()){
+		m = m.clone();
+	}
+```
+	
 
 	5.20 拷贝矩阵
 	
